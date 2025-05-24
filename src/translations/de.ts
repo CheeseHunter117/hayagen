@@ -7,10 +7,10 @@ export default translation({
 	copy_yaml: "YAML kopieren",
 	label_label: {
 		name: "Label",
-		description: "der Name unter dem der Eintrag in Typst referenziert wird",
+		description: "Der Name über welchen der Eintrag in Typst referenziert wird.",
 	},
-	delete_tooltip: "Diesen Eintrag löschen",
-	extra_tooltip: "Es sind zusätzlche Textfelder mit diesem Eintrag verbunden",
+	delete_tooltip: "Diesen Eintrag löschen.",
+	extra_tooltip: "Es sind zusätzlche Textfelder mit diesem Eintrag verbunden.",
 	format_tooltips: {
 		date: "JJJJ-MM-TT, JJJJ-MM or JJJJ",
 		timestamp: "MM:SS (vollständiges Format: TT:HH:MM:SS,msms)",
@@ -46,7 +46,11 @@ export default translation({
 			repository: "Quelltext Repositorium",
 			scene: "Szene",
 			thesis: "Abschlussarbeit",
-			thread: "Thread",
+
+      // There are possible translations like "Gesprächsfaden" or "Diskussionsfaden", but they feel overly forced.
+      // I just assume that most people that would use this type know what the English term means.
+      thread: "Thread",
+
 			video: "Video",
 			web: "Internet",
 		},
@@ -61,7 +65,7 @@ export default translation({
 		genre_label: {
 			name: "Genre",
 			description:
-				"Typ, Kategorie, oder Unterkategorie des Eintrags (z.B. „Dissertation“ für Doktorarbeiten; „WHO Publikation“ für technische Berichte der WHO). Benutzt dieses Feld nicht für oberflächliche Beschreibungen oder Kategorien (z.B. „Abendteuer“ für Abendteuer-Filme).",
+				"Typ, Kategorie, oder Unterkategorie des Eintrags (z.B. „Dissertation“ für Doktorarbeiten; „WHO Publikation“ für technische Berichte der WHO). Benutzt dieses Feld nicht für oberflächliche Beschreibungen oder Kategorien (z.B. „Abenteuer“ für Abenteuer-Filme).",
 		},
 		editor_label: plural("Herausgeber:in", "Herausgeber:innen"),
 		editor_tooltips: {
@@ -71,8 +75,7 @@ export default translation({
 		affiliated_label: {
 			name: plural("Assoziiert", "Assoziierte"),
 			description:
-				"persons involved with the item that do not fit author or editor",
-				"Personen welche mit dem Eintrag assoziiert sind, aber nicht Autor:in oder Editor:in sind",
+				"Personen welche mit dem Eintrag assoziiert sind, aber nicht Autor:in oder Editor:in sind.",
 		},
 		affiliated_tooltips: {
 			add: "Assoziierten hinzufügen",
@@ -83,84 +86,98 @@ export default translation({
 		location_label: {
 			name: "Ort",
 			description:
-				"location at which an entry is physically located or took place. For the location where an item was published, see publisher.",
-				"Ort an dem der Eintrag sich physisch befindet oder sich abgespielt hat. Für den Ort an dem ei Eintrag veröffenlicht wurde, siehe den Veröffentlichunsort.",
+				"Ort an dem der Eintrag sich physisch befindet oder sich abgespielt hat. Für den Ort an dem der Eintrag veröffenlicht wurde, siehe „Veröffentlichunsort“.",
 		},
 		organization_label: {
 			name: "Organisation",
-			description: "Organisation bei/für welche der Eintrag produziert wurde.",
+			description: "Organisation bei/für welche(r) der Eintrag produziert wurde.",
 		},
 		issue_label: {
-			name: "Issue",
+			name: "Ausgabe",
 			description:
-				"For an item whose parent has multiple issues, indicates the position in the issue sequence. Also used to indicate the episode number for TV.",
+				"Bezeichnet die genaue Ausgabennummer für Einträge bei welchen der Elterneintrag mehrere Ausgaben beinhaltet. Wird auch genutzt um die Episodennummer bei Fernsehsendungen anzugeben.",
 		},
 		volume_label: {
-			name: "Volume",
+			name: "Band",
 			description:
-				"For an item whose parent has multiple volumes/parts/seasons… of which this item is one",
+				"Für Einträge dessen Elterneintrag aus mehreren Bänden/Teilen/Staffeln besteht.",
 		},
-		total_placeholder: "total",
+		total_placeholder: "gesamt",
 		edition_label: "Edition",
-		page_range_label: "Page range",
+		page_range_label: "Seiten",
 		time_range_label: "Time range",
-		runtime_label: "Runtime",
+		runtime_label: "Laufzeit",
 		url_label: "URL",
 		accessed_label: "Accessed",
-		serial_number_label: "Serial number",
-		language_label: "Language",
+		serial_number_label: "Seriennummer",
+		language_label: "Sprache",
 		archive_label: {
-			name: "Archive",
-			description: "name of the institution/collection where the item is kept",
+			name: "Archiv",
+			description: "Name des/der Instituts/Sammlung in der sich der Eintrag befindet.",
 		},
-		archive_location_label: "Archive location",
+		archive_location_label: "Archivort",
 		call_number_label: {
-			name: "Call number",
+			name: "Standortnummer",
+
+			// Taken straight from Duden:
+			// https://www.duden.de/rechtschreibung/Standortnummer
 			description:
-				"The number of the item in a library, institution, or collection.",
+				"Kombination aus Buchstaben und Zahlen, unter der ein Eintrag in einer Bibliothek/Institution/Sammlung geführt wird und anhand deren man es findet.",
 		},
-		note_label: "Note",
-		parent_label: "Parent",
-		add_parent: "Add parent",
+		note_label: "Anmerkung",
+		parent_label: "Elterneintrag",
+		add_parent: "Elterneintrag hinzufügen",
 	},
 	person_with_role: {
-		role_label: "Role",
+		role_label: "Rolle",
 		roles: {
-			afterword: "Afterword",
-			annotator: "Annotator",
-			"cast-member": "Cast member",
-			cinematography: "Cinematography",
-			collaborator: "Collaborator",
-			commentator: "Commentator",
-			compiler: "Compiler",
-			composer: "Composer",
-			director: "Director",
-			"executive-producer": "Executive producer",
-			foreword: "Foreword",
-			founder: "Founder",
-			holder: "Holder",
-			illustrator: "Illustrator",
-			introduction: "Introduction",
-			narrator: "Narrator",
-			organizer: "Organizer",
-			producer: "Producer",
-			translator: "Translator",
-			writer: "Writer",
+			afterword: "Nachwort Autor:in",
+
+			// Both 'annotator' and 'commentator' are usually translated as the same word: "Kommentator:in".
+			// Problem with that is that 'annotator's usually write comments while 'commentator's normally give non-written comments.
+			annotator: "Kommentator:in (z.B. in Dichtung und wissenschaftlichen Ausgaben)",
+			commentator: "Kommentator:in (z.B. in Presse und Rundfunk)",
+
+			// Many online translations recommend "Schauspieler", but that leans more into 'actor' as in cinema and theatre.
+			// It would be inappropriate for music or audio books.
+			// The current word choice is more vague but can be applied to more industries.
+			"cast-member": "Besetzung",
+
+			cinematography: "Kamera",
+			collaborator: "Mitarbeiter:in",
+			compiler: "Sammler:in",
+			composer: "Komponist:in",
+			director: "Regisseur:in",
+
+			// According to German Wikipedia:
+			// https://de.wikipedia.org/w/index.php?title=Executive_Producer&oldid=249431993
+			"executive-producer": "Geschäftsführende(r) Produzent:in",
+			
+			foreword: "Vorwort Autor:in",
+			founder: "Gründer:in",
+			holder: "Besitzer:in",
+			illustrator: "Illustrator:in",
+			introduction: "Einleitung Autor:in",
+			narrator: "Erzähler:in",
+			organizer: "Organisator:in",
+			producer: "Produzent:in",
+			translator: "Übersetzer:in",
+			writer: "Schriftsteller:in",
 		},
-		names_label: "Names",
+		names_label: "Namen",
 		names_tooltips: {
-			add: "Add name",
-			remove: "Remove name",
+			add: "Namen hinzufügen",
+			remove: "Namen entfernen",
 		},
 	},
 	person: {
-		name_label: "Name",
-		given_name_label: "Given name",
+		name_label: "Nachname",
+		given_name_label: "Vorname",
 		prefix_label: "Prefix",
 		suffix_label: "Suffix",
 		alias_label: "Alias",
-		collapsed_tooltip: "Collapsed name fields",
-		expanded_tooltip: "Expanded name fields",
+		collapsed_tooltip: "Zugeklappte Namen-Textfelder",
+		expanded_tooltip: "Ausgeklappte Namen-Textfelder",
 	},
 });
 
