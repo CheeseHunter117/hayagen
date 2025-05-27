@@ -105,10 +105,10 @@ export default translation({
 		total_placeholder: "gesamt",
 		edition_label: "Edition",
 		page_range_label: "Seiten",
-		time_range_label: "Time range",
+		time_range_label: "Zeitspanne",
 		runtime_label: "Laufzeit",
 		url_label: "URL",
-		accessed_label: "Accessed",
+		accessed_label: "Zugegriffen",
 		serial_number_label: "Seriennummer",
 		language_label: "Sprache",
 		archive_label: {
